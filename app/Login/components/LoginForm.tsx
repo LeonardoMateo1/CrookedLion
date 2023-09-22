@@ -29,7 +29,7 @@ const LoginForm = () => {
             router.push("/Dashboard");
         } catch (error: any) {
             console.log("Login failed", error.message);
-            toast.error(error.message)
+            toast.error(error.response.data.error || error.message)
             setErrors(error.message)
         } finally{
             setLoading(false);
@@ -87,7 +87,8 @@ const LoginForm = () => {
                         <div className="w-full">
                             <CustomButton
                                 handleClick={onLogin}
-                                title={buttonDisabled ? "Fill Out Form" : "Sign Up"}
+                                title={buttonDisabled ? "Fill Out Form" : "Login"}
+                                disabled={buttonDisabled}
                                 containerStyles="bg-accent w-full py-[5px] font-semibold rounded-full"
                                 btnType="button"
                             />
