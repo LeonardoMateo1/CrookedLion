@@ -16,10 +16,12 @@ const Navbar = () => {
     const router = useRouter();
 
 
+
     const logout = async () => {
         try {
             await axios.get("/api/users/logout")
             toast.success("Logout Successful")
+            setIsUserPresent(false)
             router.push('/')
         } catch (error: any) {
             console.log(error.message);
