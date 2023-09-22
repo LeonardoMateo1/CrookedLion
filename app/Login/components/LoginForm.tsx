@@ -54,9 +54,6 @@ const LoginForm = () => {
                         Dive back into the world of stocks and insights awaiting you. 
                         Let's make informed investment decisions together.
                     </p>
-                    <div className="text-red-500 text-xl mt-4 px-3 py-1">
-                        Invalid Email or Password {errors}
-                    </div>
                     <div className="flex items-start flex-col mt-10 gap-4">
                         <div className="flex flex-col gap-1">
                             <div className="flex w-full justify-between">

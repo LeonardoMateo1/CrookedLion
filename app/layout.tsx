@@ -2,6 +2,7 @@ import './globals.css'
 import localFont from 'next/font/local';
 import { Navbar} from '@/components'
 import type { Metadata } from 'next'
+import { Toaster } from 'react-hot-toast';
 
 
 export const metadata: Metadata = {
@@ -23,6 +24,7 @@ export default async function RootLayout({
         <main className={ClashDisplay.className}>
           <Navbar/>
           {children}
+          <Toaster position="top-center"/>
         </main>
       </body>
     </html>

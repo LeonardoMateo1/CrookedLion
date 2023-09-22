@@ -10,6 +10,10 @@ const userSchema = new mongoose.Schema({
         type: String,
         required: [true, "Please provide a email"],
         unique: true,
+        validate: {
+            validator: val => /^([\w-.]+@([\w-]+.)+[\w-]+)?$/.test(val),
+            message: "Please enter a valid email"
+        }
     },
     password: {
         type: String,

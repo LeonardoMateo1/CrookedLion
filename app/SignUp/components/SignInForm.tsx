@@ -13,6 +13,7 @@ export default function SignInForm() {
     const [user, setUser] = React.useState({
         email: "",
         password: "",
+        confirmPassword: "",
         username: ""
     })
 
@@ -21,24 +22,24 @@ export default function SignInForm() {
 
     const onSignup = async () => {
         try {
-        setLoading(true);
-        const response = await axios.post("/api/users/signup", user);
-        console.log("Sign Up Success", response.data);
-        router.push("/Login")
+            setLoading(true);
+            const response = await axios.post("/api/users/signup", user);
+            toast.success("Sign Up Successful")
+            router.push("/Login")
         } catch (error: any) {
-        console.log("Sign Up failed", error.message);
-        toast.error(error.message);
+            console.log("Sign Up failed", error.message);
+            toast.error(error.response.data.error || error.message);
         } finally {
-        setLoading(false);
+            setLoading(false);
         }
     }
 
     useEffect(() => {
         if(user.email.length > 0 && user.password.length >
-        0 && user.username.length > 0) {
-        setButtonDisabled(false)
+            0 && user.username.length > 0) {
+            setButtonDisabled(false)
         } else {
-        setButtonDisabled(true)
+            setButtonDisabled(true)
         }
     }, [user])
 
@@ -75,12 +76,23 @@ export default function SignInForm() {
                             <div className="w-[362px] bg-red-300"/>
                         </div>
                         <div className="flex flex-col gap-1">
-                            <label className="text-sm font-semibold" >Password:</label>
+                            <label className="text-sm font-semibold" htmlFor="password" >Password:</label>
                             <input 
                                 id="password"
                                 type="password" 
                                 value={user.password}
                                 onChange={(e) => setUser({...user, password: e.target.value})}
+                                className="text-black py-1 font-medium pl-2 outline-none"
+                            />
+                            <div className="w-[362px] bg-red-300"/>
+                        </div>
+                        <div className="flex flex-col gap-1">
+                            <label className="text-sm font-semibold" htmlFor="confirmPassword" >Confirm Password:</label>
+                            <input 
+                                id="confirmPassword"
+                                type="password" 
+                                value={user.confirmPassword}
+                                onChange={(e) => setUser({...user, confirmPassword: e.target.value})}
                                 className="text-black py-1 font-medium pl-2 outline-none"
                             />
                             <div className="w-[362px] bg-red-300"/>
