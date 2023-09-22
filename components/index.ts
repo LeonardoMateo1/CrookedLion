@@ -3,6 +3,7 @@ import Hero from "./Hero";
 import Empower from "./Empower";
 import Blog from './Blog';
 import Testimonials from "./Testimonials";
+import GetStarted from "./GetStarted";
 
 export {
     Navbar,
@@ -10,4 +11,5 @@ export {
     Empower,
     Blog,
     Testimonials,
+    GetStarted,
 }
