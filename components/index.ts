@@ -4,6 +4,7 @@ import Empower from "./Empower";
 import Blog from './Blog';
 import Testimonials from "./Testimonials";
 import GetStarted from "./GetStarted";
+import Footer from "./Footer";
 
 export {
     Navbar,
@@ -12,4 +13,5 @@ export {
     Blog,
     Testimonials,
     GetStarted,
+    Footer,
 }

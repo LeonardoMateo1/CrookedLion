@@ -1,4 +1,4 @@
-import { Blog, Empower, GetStarted, Hero, Testimonials } from '@/components'
+import { Blog, Empower, Footer, GetStarted, Hero, Testimonials } from '@/components'
 import Image from 'next/image'
 
 export default function Home() {
@@ -9,6 +9,7 @@ export default function Home() {
       <Blog/>
       <Testimonials/>
       <GetStarted/>
+      <Footer/>
     </main>
   )
 }
