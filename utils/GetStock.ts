@@ -8,6 +8,7 @@ export const getMonthlyStockData = async ( symbol: string ) => {
     }
 
     const data = await res.json();
+
     if (!data['Monthly Adjusted Time Series']) {
         throw new Error('Monthly Adjusted Time Series data not found in API response');
     }
