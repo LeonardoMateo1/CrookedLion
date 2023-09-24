@@ -8,7 +8,6 @@ export const getMonthlyStockData = async ( symbol: string ) => {
     }
 
     const data = await res.json();
-
     if (!data['Monthly Adjusted Time Series']) {
         throw new Error('Monthly Adjusted Time Series data not found in API response');
     }
@@ -22,13 +21,11 @@ export const getWeeklyStockData = async ( symbol: string ) => {
     if (!res.ok) {
         throw new Error(`API call failed with status: ${res.status}`);
     }
-
     const data = await res.json();
 
     if (!data['Weekly Adjusted Time Series']) {
         throw new Error('Weekly Adjusted Time Series data not found in API response');
     }
-
     return data;
 }
 
@@ -41,8 +38,8 @@ export const getDailyStockData = async ( symbol: string ) => {
 
     const data = await res.json();
 
-    if (!data['Daily Time Series']) {
-        throw new Error('Daily Time Series data not found in API response');
+    if (!data['Time Series (Daily)']) {
+        throw new Error('Time Series (Daily) data not found in API response');
     }
 
     return data;

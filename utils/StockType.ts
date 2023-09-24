@@ -8,33 +8,34 @@ type StockEntry = {
 export type StockData = {
     'Monthly Adjusted Time Series': Record<string, StockEntry>,
     'Weekly Adjusted Time Series': Record<string, StockEntry>,
-    'Daily Time Series': Record<string, StockEntry>,
+    'Time Series (Daily)': Record<string, StockEntry>,
 };
 
-const formatSeriesData = (seriesData: Record<string, StockEntry>, formattedData: Array<{ x: string, y: string[] }>) => {
+const formatSeriesData = (seriesData: Record<string, StockEntry>, formattedData: Array<{ x: string, y: number[] }>) => {
     Object.entries(seriesData).forEach(([key, value]: [string, StockEntry]) => {
         formattedData.push({
             x: key,
             y: [
-                value['1. open'],
-                value['2. high'],
-                value['3. low'],
-                value['4. close'],
+                parseFloat(value['1. open']),
+                parseFloat(value['2. high']),
+                parseFloat(value['3. low']),
+                parseFloat(value['4. close'])
             ]
         });
     });
 }
 
 export const formatStockData = (stockData: StockData) => {
-    const formattedData: Array<{ x: string, y: string[] }> = [];
+    const formattedData: Array<{ x: string, y: number[] }> = [];
+    
     if(stockData['Monthly Adjusted Time Series']){
         formatSeriesData(stockData['Monthly Adjusted Time Series'], formattedData);
-    };
+    }
     if(stockData['Weekly Adjusted Time Series']){
         formatSeriesData(stockData['Weekly Adjusted Time Series'], formattedData);
-    };
-    if(stockData['Daily Time Series']){
-        formatSeriesData(stockData['Daily Time Series'], formattedData);
+    }
+    if(stockData['Time Series (Daily)']){
+        formatSeriesData(stockData['Time Series (Daily)'], formattedData);
     }
     return formattedData;
 }
