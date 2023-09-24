@@ -3,6 +3,7 @@ export type NewType = {
     title: string
     description: string
     image_url: string
+    url: string
 }
 
 export type NewsType = {

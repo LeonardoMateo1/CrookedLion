@@ -4,6 +4,7 @@ import Image from "next/image";
 import React, { useEffect } from 'react';
 import { NewsType } from "@/utils/NewsType";
 import { getNews } from "@/utils/GetNews";
+import Link from "next/link";
 
 
 export default function NewsList({ symbol }: { symbol: string }) {
@@ -28,20 +29,22 @@ export default function NewsList({ symbol }: { symbol: string }) {
 
 
     return (
-        <div>
+        <div className="flex flex-col gap-5 px-4">
             {
                 news.results.map((newsItem) => (
-                    <div key={newsItem.uuid}>
-                        <h2>{newsItem.title}</h2>
-                        <p>{newsItem.description}</p>
-                        <div>
-                            <Image
-                                src={newsItem.image_url}
-                                width={500}
-                                height={500}
-                                alt={newsItem.title}
-                            />
-                        </div>
+                    <div key={newsItem.uuid} className="hover:shadow-lg hover:shadow-secondary">
+                        <Link href={newsItem.url} className="flex flex-col-reverse sm:flex-row-reverse  text-black">
+                            <div className="w-full flex justify-start px-4 items-center bg-primary brightness-50">
+                                <p>{newsItem.description}</p>
+                            </div>
+                            <div>
+                                <img
+                                    src={newsItem.image_url}
+                                    alt={newsItem.title}
+                                    className="sm:w-[300px] object-cover h-full w-full"
+                                />
+                            </div>
+                        </Link>
                     </div>
                 ))
             }
