@@ -53,12 +53,12 @@ export default function SignInForm() {
             <div className="w-full h-full flex-center ">
                 <div className="flex-center flex-col">
                     <h2 className="home_h mb-5">{loading ? "Processing" : "Sign Up"}</h2>
-                    <p className="font-semibold text-sm w-[531px] text-center tracking-wide">
+                    <p className="font-semibold text-sm w-[90%] md:w-[500px] text-center tracking-wide">
                         Embark on a journey of insightful stock analysis and market intelligence. 
                         Join us and elevate your investment strategy today. Ready to dive In?
                     </p>
-                    <div className="flex items-start flex-col mt-10 gap-4">
-                        <div className="flex flex-col gap-1">
+                    <div className="flex items-start flex-col mt-10 gap-4 w-[90%] sm:w-[22.7rem]">
+                        <div className="flex flex-col gap-1 px-2 sm:px-0 w-full">
                             <label className="text-sm font-semibold" htmlFor="username" >User Name:</label>
                             <input
                                 id="username"
@@ -67,9 +67,9 @@ export default function SignInForm() {
                                 onChange={(e) => setUser({...user, username: e.target.value})} 
                                 className="text-black py-1 font-medium pl-2 outline-none"
                             />
-                            <div className="w-[362px] bg-red-300"/>
+                            <div className="sm:w-[362px] bg-red-300"/>
                         </div>
-                        <div className="flex flex-col gap-1">
+                        <div className="flex flex-col gap-1 px-2 sm:px-0 w-full">
                             <label className="text-sm font-semibold" htmlFor="email" >Email:</label>
                             <input 
                                 id="email"
@@ -78,9 +78,9 @@ export default function SignInForm() {
                                 onChange={(e) => setUser({...user, email: e.target.value})} 
                                 className="text-black py-1 font-medium pl-2 outline-none"
                             />
-                            <div className="w-[362px] bg-red-300"/>
+                            <div className="sm:w-[362px] bg-red-300"/>
                         </div>
-                        <div className="flex flex-col gap-1">
+                        <div className="flex flex-col gap-1 px-2 sm:px-0 w-full">
                             <label className="text-sm font-semibold" htmlFor="password" >Password:</label>
                             <input 
                                 id="password"
@@ -89,9 +89,9 @@ export default function SignInForm() {
                                 onChange={(e) => setUser({...user, password: e.target.value})}
                                 className="text-black py-1 font-medium pl-2 outline-none"
                             />
-                            <div className="w-[362px] bg-red-300"/>
+                            <div className="sm:w-[362px] bg-red-300"/>
                         </div>
-                        <div className="flex flex-col gap-1">
+                        <div className="flex flex-col gap-1 px-2 sm:px-0 w-full">
                             <label className="text-sm font-semibold" htmlFor="confirmPassword" >Confirm Password:</label>
                             <input 
                                 id="confirmPassword"
@@ -100,9 +100,9 @@ export default function SignInForm() {
                                 onChange={(e) => setUser({...user, confirmPassword: e.target.value})}
                                 className="text-black py-1 font-medium pl-2 outline-none"
                             />
-                            <div className="w-[362px] bg-red-300"/>
+                            <div className="sm:w-[362px] bg-red-300"/>
                         </div>
-                        <div className="w-full">
+                        <div className="w-full px-2 sm:px-0">
                             <CustomButton
                                 handleClick={onSignup}
                                 title={buttonDisabled ? "Fill Out Form" : "Sign Up"}

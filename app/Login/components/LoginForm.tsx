@@ -55,7 +55,7 @@ const LoginForm = () => {
             <div className="w-full h-full flex-center ">
                 <div className="flex-center flex-col">
                     <h2 className="home_h mb-5">{loading ? "Processing" : "Log In"}</h2>
-                    <p className="font-semibold text-sm w-[90%] sm:w-[531px] text-center tracking-wide">
+                    <p className="font-semibold text-sm w-[90%] sm:w-[500px] text-center tracking-wide">
                         Dive back into the world of stocks and insights awaiting you. 
                         Let's make informed investment decisions together.
                     </p>
