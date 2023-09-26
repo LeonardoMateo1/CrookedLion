@@ -49,8 +49,8 @@ export default function StockCharts({ symbol }: { symbol: string }) {
 
 
     return (
-        <div className="flex-center">
-            <div className="flex flex-col ">
+        <div className="flex-center md:flex-row flex-col">
+            <div className="flex flex-col w-full">
                 <ReactApexChart 
                     series={
                         [
@@ -61,7 +61,6 @@ export default function StockCharts({ symbol }: { symbol: string }) {
                     }
                     // @ts-ignore
                     options={monthCandleStickOptions}
-                    width={600}
                     type="candlestick"
                 />
                 <ReactApexChart 
@@ -74,11 +73,10 @@ export default function StockCharts({ symbol }: { symbol: string }) {
                     }
                     // @ts-ignore
                     options={weekCandleStickOptions}
-                    width={600}
                     type="candlestick"
                 />
             </div>
-            <div className="">
+            <div className="w-full">
                 <ReactApexChart 
                     series={
                         [
@@ -89,7 +87,6 @@ export default function StockCharts({ symbol }: { symbol: string }) {
                     }
                     // @ts-ignore
                     options={dayCandleStickOptions}
-                    width={800}
                     type="candlestick"
                 />
             </div>

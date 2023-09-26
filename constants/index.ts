@@ -28,20 +28,55 @@ export const LogSignForms = [
     },
 ];
 
+const responsiveOptions = [
+    {
+        breakpoint: 1000,
+        options: {
+            chart: {
+                height: 600,
+            }
+        }
+    },
+    {
+        breakpoint: 600,
+        options: {
+            chart: {
+                height: 400,
+            }
+        }
+    }
+];
+const alternateresponsiveOptions = [
+    {
+        breakpoint: 1000,
+        options: {
+            chart: {
+                height: 400,
+            }
+        }
+    },
+    {
+        breakpoint: 600,
+        options: {
+            chart: {
+                height: 400,
+            }
+        }
+    }
+];
+
 export const dayCandleStickOptions = {
     chart: {
         type: "candlestick",
         width: "100%",
-        height: 1000,
+        height: 800,
         foreColor: "#373d3f"
     },
     title: {
         text: "Daily Stock Chart",
         align: "left",
     },
-    responsive: [{
-        breakpoint: 1000,
-    }],
+    responsive: responsiveOptions,
     xaxis: {
         type: "datetime",
     },
@@ -55,15 +90,13 @@ export const monthCandleStickOptions = {
     chart: {
         type: "candlestick",
         width: "100%",
-        height: "100%"
+        height: 600
     },
     title: {
         text: "Monthly Stock Chart ",
         align: "left",
     },
-    responsive: [{
-        breakpoint: 1000,
-    }],
+    responsive: alternateresponsiveOptions,
     xaxis: {
         type: "datetime",
     },
@@ -77,15 +110,13 @@ export const weekCandleStickOptions = {
     chart: {
         type: "candlestick",
         width: "100%",
-        height: "100%"
+        height: 600
     },
     title: {
         text: "Weekly Stock Chart",
         align: "left",
     },
-    responsive: [{
-        breakpoint: 1000,
-    }],
+    responsive: alternateresponsiveOptions,
     xaxis: {
         type: "datetime",
     },
