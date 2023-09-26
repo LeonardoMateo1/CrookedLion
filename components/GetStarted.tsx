@@ -4,7 +4,7 @@ import CustomButton from "./CustomButton";
 
 const GetStarted = () => {
     return (
-        <div className="hidden xl:flex mt-40 w-full bg-black py-10 px-5 2xl:px-0">
+        <div className="hidden xl:flex mt-40 w-full py-10 px-5 2xl:px-0">
             <div className="w-full h-full max-width flex-between">
                 <div>
                     <h2 className="home_h">Start Analyzing Stock Today!</h2>
