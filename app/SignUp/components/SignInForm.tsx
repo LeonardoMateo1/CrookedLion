@@ -44,7 +44,12 @@ export default function SignInForm() {
     }, [user])
 
     return (
-        <div className="bg-bg h-screen w-[50%]">
+        <div className="bg-bg h-screen w-full lg:w-[50%]">
+            <div className="fixed w-full top-0 bg-bg z-20">
+                <div className=" h-full mx-20 my-5 flex-center lg:flex lg:justify-start max-width px-4 2xl:px-0">
+                    <Link href='/'><h2 className="font-bold text-4xl">CrookedLion</h2></Link>
+                </div>
+            </div>
             <div className="w-full h-full flex-center ">
                 <div className="flex-center flex-col">
                     <h2 className="home_h mb-5">{loading ? "Processing" : "Sign Up"}</h2>

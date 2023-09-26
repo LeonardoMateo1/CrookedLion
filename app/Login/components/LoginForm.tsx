@@ -46,16 +46,21 @@ const LoginForm = () => {
 
 
     return (
-        <div className="bg-bg h-screen w-[50%]">
+        <div className="bg-bg h-screen w-full lg:w-[50%]">
+            <div className="fixed w-full top-0 bg-bg z-20">
+                <div className=" h-full mx-20 my-5 flex-center lg:flex lg:justify-start max-width px-4 2xl:px-0">
+                    <Link href='/'><h2 className="font-bold text-4xl">CrookedLion</h2></Link>
+                </div>
+            </div>
             <div className="w-full h-full flex-center ">
                 <div className="flex-center flex-col">
                     <h2 className="home_h mb-5">{loading ? "Processing" : "Log In"}</h2>
-                    <p className="font-semibold text-sm w-[531px] text-center tracking-wide">
+                    <p className="font-semibold text-sm w-[90%] sm:w-[531px] text-center tracking-wide">
                         Dive back into the world of stocks and insights awaiting you. 
                         Let's make informed investment decisions together.
                     </p>
-                    <div className="flex items-start flex-col mt-10 gap-4">
-                        <div className="flex flex-col gap-1">
+                    <div className="flex items-start flex-col mt-10 gap-4 bg-red-500 w-[22.7rem]">
+                        <div className="flex flex-col gap-1 px-2 sm:px-0 w-full">
                             <div className="flex w-full justify-between">
                                 <label className="text-sm font-semibold" htmlFor="email" >Email:</label>
                             </div>
@@ -64,12 +69,12 @@ const LoginForm = () => {
                                 type="text"
                                 value={user.email}
                                 onChange={(e) => setUser({...user, email: e.target.value})} 
-                                className="text-black py-1 font-medium pl-2 outline-none"
+                                className="text-black py-1 font-medium pl-2 outline-none w-full"
                             />
-                            <div className="w-[362px] bg-red-300"/>
+                            <div className="sm:w-[362px] bg-red-300"/>
                         </div>
-                        <div className="flex flex-col gap-1">
-                            <div className="flex w-full justify-between">
+                        <div className="flex flex-col gap-1 w-[22.7rem]">
+                            <div className="flex w-full justify-between ">
                                 <label className="text-sm font-semibold" htmlFor="password" >Password:</label>
                                 <div className="text-xs underline font-medium">
                                     Forgot your Password?
@@ -80,9 +85,9 @@ const LoginForm = () => {
                                 type="password" 
                                 value={user.password}
                                 onChange={(e) => setUser({...user, password: e.target.value})}
-                                className="text-black py-1 font-medium pl-2 outline-none"
+                                className="text-black py-1 font-medium pl-2 outline-none w-full"
                             />
-                            <div className="w-[362px] bg-red-300"/>
+                            <div className="sm:w-[362px] bg-red-300"/>
                         </div>
                         <div className="w-full">
                             <CustomButton
