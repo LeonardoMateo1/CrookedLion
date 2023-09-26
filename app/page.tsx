@@ -7,8 +7,8 @@ export default function Home() {
       <Navbar/>
       <Hero/>
       <Empower/>
-      {/* <Blog/>
-      <Testimonials/>
+      <Blog/>
+      {/* <Testimonials/>
       <GetStarted/>
       <Footer/> */}
     </main>

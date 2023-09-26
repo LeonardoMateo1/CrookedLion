@@ -30,35 +30,35 @@ const blog = [
 const Blog = () => {
     return (
         <div className="w-full new">
-    <div className="h-full w-full flex flex-col gap-20  max-width items-center">
-        <h2 className="home_h w-[858px] text-center">Powerful Stock Analysis Tools for Informed Investment Decisions</h2>
-        <div className="w-full ">
-            <div className="grid grid-cols-3 gap-20 w-full">
-                {blog.map(({id, title, description, btn, imgUrl}) => {
-                    return (
-                        <div key={id} className="flex flex-col ">
-                            <div className="w-full h-full">
-                                <div className="relative h-[225px]">
-                                    <Image fill priority src={imgUrl} alt="blog" sizes="225px" className="object-cover"/>
+            <div className="h-full w-full flex flex-col gap-20  max-width items-center px-5 lg:px-0">
+                <h2 className="home_h w-[90%] lg:w-[858px] text-center">Powerful Stock Analysis Tools for Informed Investment Decisions</h2>
+                <div className="w-full ">
+                    <div className="grid lg:grid-cols-3 gap-5 xl:gap-20 w-full">
+                        {blog.map(({id, title, description, btn, imgUrl}) => {
+                            return (
+                                <div key={id} className="flex flex-col ">
+                                    <div className="w-full h-full">
+                                        <div className="relative h-[225px]">
+                                            <Image fill priority src={imgUrl} alt="blog" sizes="225px" className="object-cover"/>
+                                        </div>
+                                    </div>
+                                    <div className="mt-7 flex flex-col gap-4">
+                                        <h3 className="font-semibold text-2xl">{title}</h3>
+                                        <p className="text-sm font-medium text-secondary">{description}</p>
+                                        <Link href="/SignUp">
+                                            <CustomButton 
+                                            title={btn}
+                                            btnType="button"
+                                            />
+                                        </Link>
+                                    </div>
                                 </div>
-                            </div>
-                            <div className="mt-7 flex flex-col gap-4">
-                                <h3 className="font-semibold text-2xl">{title}</h3>
-                                <p className="text-sm font-medium text-secondary">{description}</p>
-                                <Link href="/SignUp">
-                                    <CustomButton 
-                                    title={btn}
-                                    btnType="button"
-                                    />
-                                </Link>
-                            </div>
-                        </div>
-                    )
-                })}
+                            )
+                        })}
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
-</div>
     )
 }
 
