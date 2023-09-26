@@ -6,7 +6,7 @@ const Hero = () => {
 
 
     return (
-        <div className=" w-full mt-[20rem] flex">
+        <div className=" w-full mt-[11rem] sm:mt-[20rem] flex">
             <div className="h-full w-full max-width px-4">
                 <div className="text-xl font-medium">
                     <h1 className="home_h w-[80%] sm:w-[519px]">Powerful Stock Analysis for Informed Investing</h1>

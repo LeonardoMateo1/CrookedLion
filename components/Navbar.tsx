@@ -10,7 +10,7 @@ const Navbar = () => {
 
     return (
         <div className="fixed w-full top-0 bg-bg z-20">
-            <div className=" h-full mx-20 my-5 flex-between">
+            <div className=" h-full mx-20 my-5 flex-center flex-col sm:flex-row flex-between max-width px-4 2xl:px-0">
                 <Link href='/'><h2 className="font-bold text-4xl">CrookedLion</h2></Link>
                 <div>
                     <div className="flex-center gap-4">
