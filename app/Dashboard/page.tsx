@@ -1,17 +1,14 @@
 import Image from "next/image";
-import dynamic from 'next/dynamic';
-import NewsList from "./components/NewsList";
+import StockNewsDashboard from "./components/StockNewsDashboard";
+import { UserNavbar } from "@/components";
 
-const StockCharts = dynamic(() => import('./components/StockCharts'), {
-  ssr: false,
-})
 
 export default function page() {
   return (
     <main className="w-full mt-[10rem] flex">
+      <UserNavbar/>
       <div className="h-full w-full max-width">
-          {/* <StockCharts symbol="ibm" /> */}
-          <NewsList symbol="ibm"/>
+        <StockNewsDashboard />
       </div>
     </main>
   )

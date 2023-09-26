@@ -6,6 +6,7 @@ import Testimonials from "./Testimonials";
 import GetStarted from "./GetStarted";
 import Footer from "./Footer";
 import FormTestimonials from "./FormTestimonials";
+import UserNavbar from "./UserNavbar";
 
 
 export {
@@ -17,4 +18,5 @@ export {
     GetStarted,
     Footer,
     FormTestimonials,
+    UserNavbar,
 }
