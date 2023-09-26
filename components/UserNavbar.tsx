@@ -34,7 +34,6 @@ const UserNavbar = () => {
             console.log(res.data);
             setUserName(res.data.data.username);
             setIsUserPresent(true)
-            console.log(isUserPresent)
         })
         .catch((err)=>console.log(err))
     }, [])

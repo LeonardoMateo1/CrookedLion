@@ -6,11 +6,11 @@ export default function Home() {
     <main className='relative'>
       <Navbar/>
       <Hero/>
-      <Empower/>
+      {/* <Empower/>
       <Blog/>
       <Testimonials/>
       <GetStarted/>
-      <Footer/>
+      <Footer/> */}
     </main>
   )
 }
