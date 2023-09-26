@@ -9,8 +9,8 @@ export default function Home() {
       <Empower/>
       <Blog/>
       <Testimonials/>
-      {/* <GetStarted/>
-      <Footer/> */}
+      <GetStarted/>
+      {/* <Footer/> */}
     </main>
   )
 }
