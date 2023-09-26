@@ -59,7 +59,7 @@ const LoginForm = () => {
                         Dive back into the world of stocks and insights awaiting you. 
                         Let's make informed investment decisions together.
                     </p>
-                    <div className="flex items-start flex-col mt-10 gap-4 bg-red-500 w-[22.7rem]">
+                    <div className="flex items-start flex-col mt-10 gap-4  w-[90%] sm:w-[22.7rem]">
                         <div className="flex flex-col gap-1 px-2 sm:px-0 w-full">
                             <div className="flex w-full justify-between">
                                 <label className="text-sm font-semibold" htmlFor="email" >Email:</label>
@@ -71,9 +71,9 @@ const LoginForm = () => {
                                 onChange={(e) => setUser({...user, email: e.target.value})} 
                                 className="text-black py-1 font-medium pl-2 outline-none w-full"
                             />
-                            <div className="sm:w-[362px] bg-red-300"/>
+                            <div className="sm:w-[362px] "/>
                         </div>
-                        <div className="flex flex-col gap-1 w-[22.7rem]">
+                        <div className="flex flex-col gap-1 px-2 sm:px-0 w-full">
                             <div className="flex w-full justify-between ">
                                 <label className="text-sm font-semibold" htmlFor="password" >Password:</label>
                                 <div className="text-xs underline font-medium">
@@ -87,9 +87,9 @@ const LoginForm = () => {
                                 onChange={(e) => setUser({...user, password: e.target.value})}
                                 className="text-black py-1 font-medium pl-2 outline-none w-full"
                             />
-                            <div className="sm:w-[362px] bg-red-300"/>
+                            <div className="sm:w-[362px] "/>
                         </div>
-                        <div className="w-full">
+                        <div className="w-full px-2 sm:px-0">
                             <CustomButton
                                 handleClick={onLogin}
                                 title={buttonDisabled ? "Fill Out Form" : "Login"}
