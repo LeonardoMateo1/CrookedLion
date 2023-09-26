@@ -6,8 +6,8 @@ export default function Home() {
     <main className='relative'>
       <Navbar/>
       <Hero/>
-      {/* <Empower/>
-      <Blog/>
+      <Empower/>
+      {/* <Blog/>
       <Testimonials/>
       <GetStarted/>
       <Footer/> */}
