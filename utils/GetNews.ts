@@ -1,8 +1,8 @@
 const encodedApiToken = encodeURIComponent(process.env.NEWS_API_KEY!);
 
 
-export const getNews = async ( symbol: string, language: string) => {
-    const res = await fetch(` https://api.marketaux.com/v1/news/all?symbols=${symbol}&filter_entities=true&language=${language}&api_token=AaczVo8TBSjl1UvsvL3DWVVEaf5xvs3rC7jCZSGU`);
+export const getNews = async ( symbol: string ) => {
+    const res = await fetch(` https://api.marketaux.com/v1/news/all?symbols=${symbol}&filter_entities=true&language=en&api_token=AaczVo8TBSjl1UvsvL3DWVVEaf5xvs3rC7jCZSGU`);
 
     if (!res.ok) {
         throw new Error(`API call failed with status: ${res.status}`);
