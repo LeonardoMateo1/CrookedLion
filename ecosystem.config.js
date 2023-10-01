@@ -5,7 +5,7 @@ module.exports = {
 
   deploy : {
     production : {
-      key: 'crookedlion.pem',
+      key: 'crookedlion2.pem',
       user : 'ubuntu',
       host : '54.152.95.176',
       ref  : 'origin/main',
