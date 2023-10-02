@@ -1,30 +1,27 @@
 export const LogSignForms = [
     {
         id: 1,
-        stars: "5",
-        description: "",
+        description: "Harnessing cutting-edge technology and comprehensive market data, CrookedLion stands out as a leading stock analysis platform. Trusted by professionals and novices alike, it delivers actionable insights that drive smart investment decisions.",
         name: "Steven Bryant",
         position: "Head Investor",
         company: "Lenvera",
-        imgurl: ""
+        imgurl: "/steven.jpg"
     },
     {
         id: 2,
-        stars: "5",
-        description: "",
+        description: "In the intricate world of stock market analysis, CrookedLion emerges as a beacon of clarity. Its user-friendly interface combined with in-depth analytics makes it the go-to platform for anyone serious about growing their portfolio.",
         name: "Peter Smith",
         position: "Investment Analyst",
         company: "Stock Adventure",
-        imgurl: ""
+        imgurl: "/peter.jpg"
     },
     {
         id: 3,
-        stars: "5",
-        description: "",
+        description: "CrookedLion redefines stock market analysis with its intuitive tools and real-time data. Pioneering in its approach, it's not just a website – it's your most reliable partner in the quest for stock market success.",
         name: "Xavier Provost",
         position: "Investor",
         company: "Lion Venture",
-        imgurl: ""
+        imgurl: "/xavier.jpg"
     },
 ];
 
