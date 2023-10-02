@@ -7,13 +7,19 @@ import { getNews } from "@/utils/GetNews";
 import Link from "next/link";
 
 
-export default function NewsList({ symbol }: { symbol: string }) {
+type NewsListProps = {
+    symbol: string;
+    language: string;
+    country: string;
+};
+
+export default function NewsList({ symbol, language, country }: NewsListProps) {
 
     const [news, setNews] = React.useState<NewsType | null>(null);
 
     useEffect(() => {
         async function fetchNews() {
-            const fetchedData = await getNews(symbol); // Assuming getNews can accept a symbol prop
+            const fetchedData = await getNews(symbol, language, country);
             if (fetchedData) {
                 setNews({
                 page: fetchedData.meta.page,
