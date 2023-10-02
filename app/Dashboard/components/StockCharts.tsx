@@ -50,7 +50,7 @@ export default function StockCharts({ symbol }: { symbol: string }) {
 
     return (
         <div className="flex-center md:flex-row flex-col">
-            <div className="flex flex-col w-full">
+            <div className="flex flex-col w-full" id="stockchart">
                 <ReactApexChart 
                     series={
                         [
@@ -76,7 +76,7 @@ export default function StockCharts({ symbol }: { symbol: string }) {
                     type="candlestick"
                 />
             </div>
-            <div className="w-full">
+            <div className="w-full" id="stockchart">
                 <ReactApexChart 
                     series={
                         [

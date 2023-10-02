@@ -34,3 +34,7 @@
 .home_h {
   @apply font-semibold text-5xl
 }
+
+#stockchart .apexcharts-tooltip {
+  @apply bg-secondary text-white; /* Adjust as needed */
+}
