@@ -7,7 +7,7 @@ module.exports = {
     production : {
       key: 'crookedlion2.pem',
       user : 'ubuntu',
-      host : '3.94.54.182',
+      host : '18.233.7.253',
       ref  : 'origin/main',
       repo : 'git@github.com:LeonardoMateo1/CrookedLion.git',
       path : '/home/ubuntu',
