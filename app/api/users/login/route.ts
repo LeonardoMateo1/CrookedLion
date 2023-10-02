@@ -29,6 +29,10 @@ export async function POST(request: NextRequest) {
             email: user.email
         }
 
+        if (!process.env.JWT_SECRET_KEY) {
+            console.error('JWT_SECRET_KEY is not defined.');
+            }
+
         const token = await jwt.sign(tokenData, process.env.JWT_SECRET_KEY!, {expiresIn: "1d"})
 
         const response = NextResponse.json({
